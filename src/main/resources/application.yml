@@ -30,14 +30,23 @@ spring:
 
 # Actuator
 management:
+  server:
+    port: 8081
   endpoints:
     web:
       exposure:
         include: "*"
+      base-path: /
+      path-mapping:
+        prometheus: /metrics
+  endpoint:
+    health:
+      show-details: always
   prometheus:
     metrics:
       export:
         enabled: true
+
 
 # Logging
 logging:

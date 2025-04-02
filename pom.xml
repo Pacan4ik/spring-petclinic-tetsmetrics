@@ -38,6 +38,7 @@
     <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
     <spring-format.version>0.0.43</spring-format.version>
 
+    <micrometer-registry-prometheus.version>1.13.5</micrometer-registry-prometheus.version>
   </properties>
 
   <dependencies>
@@ -150,6 +151,12 @@
     <dependency>
       <groupId>jakarta.xml.bind</groupId>
       <artifactId>jakarta.xml.bind-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.micrometer</groupId>
+      <artifactId>micrometer-registry-prometheus</artifactId>
+      <version>${micrometer-registry-prometheus.version}</version>
     </dependency>
 
   </dependencies>
