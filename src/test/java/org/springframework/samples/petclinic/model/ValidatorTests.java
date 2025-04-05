@@ -22,7 +22,9 @@ import java.util.Locale;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.context.i18n.LocaleContextHolder;
+import org.springframework.samples.petclinic.TestMetricWatcher;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
 import jakarta.validation.ConstraintViolation;
@@ -32,6 +34,7 @@ import jakarta.validation.Validator;
  * @author Michael Isvy Simple test to make sure that Bean Validation is working (useful
  * when upgrading to a new version of Hibernate Validator/ Bean Validation)
  */
+@ExtendWith(TestMetricWatcher.class)
 class ValidatorTests {
 
 	private Validator createValidator() {

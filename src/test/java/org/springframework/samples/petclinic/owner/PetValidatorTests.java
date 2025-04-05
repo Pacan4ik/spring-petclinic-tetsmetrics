@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.samples.petclinic.TestMetricWatcher;
 import org.springframework.validation.Errors;
 import org.springframework.validation.MapBindingResult;
 
@@ -38,6 +39,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 @ExtendWith(MockitoExtension.class)
 @DisabledInNativeImage
+@ExtendWith(TestMetricWatcher.class)
 public class PetValidatorTests {
 
 	private PetValidator petValidator;

@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'petclinic-app'
+    metrics_path: '/metrics'
+    static_configs:
+#      Replace petclinic:8081 with the actual container name and port if you are running the app in a container
+      - targets: ['host.docker.internal:8081', 'petclinic:8081', 'host.docker.internal:9091']
+

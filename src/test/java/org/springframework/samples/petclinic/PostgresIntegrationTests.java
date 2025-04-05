@@ -29,6 +29,7 @@ import org.apache.commons.logging.LogFactory;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.event.ApplicationPreparedEvent;
@@ -52,6 +53,7 @@ import org.testcontainers.DockerClientFactory;
 		"spring.docker.compose.start.arguments=--force-recreate,--renew-anon-volumes,postgres" })
 @ActiveProfiles("postgres")
 @DisabledInNativeImage
+@ExtendWith(TestMetricWatcher.class)
 public class PostgresIntegrationTests {
 
 	@LocalServerPort
