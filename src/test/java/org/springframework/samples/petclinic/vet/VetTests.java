@@ -16,6 +16,8 @@
 package org.springframework.samples.petclinic.vet;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.samples.petclinic.TestMetricWatcher;
 import org.springframework.util.SerializationUtils;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,6 +25,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * @author Dave Syer
  */
+@ExtendWith(TestMetricWatcher.class)
 class VetTests {
 
 	@Test

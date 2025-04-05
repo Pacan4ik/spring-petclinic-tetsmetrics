@@ -17,6 +17,8 @@
 package org.springframework.samples.petclinic.system;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.springframework.samples.petclinic.TestMetricWatcher;
 
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 
@@ -28,6 +30,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
  */
 // Waiting https://github.com/spring-projects/spring-boot/issues/5574 ..good
 // luck ((plain(st) UNIT test)! :)
+@ExtendWith(TestMetricWatcher.class)
 class CrashControllerTests {
 
 	final CrashController testee = new CrashController();

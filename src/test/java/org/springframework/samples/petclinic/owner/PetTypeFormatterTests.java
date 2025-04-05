@@ -32,6 +32,7 @@ import org.junit.jupiter.api.condition.DisabledInNativeImage;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.samples.petclinic.TestMetricWatcher;
 
 /**
  * Test class for {@link PetTypeFormatter}
@@ -40,6 +41,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
  */
 @ExtendWith(MockitoExtension.class)
 @DisabledInNativeImage
+@ExtendWith(TestMetricWatcher.class)
 class PetTypeFormatterTests {
 
 	@Mock
